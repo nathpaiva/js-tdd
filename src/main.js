@@ -8,5 +8,3 @@ function name(c) {
 
 const c = 2;
 name(c);
-
-console.log(c);
