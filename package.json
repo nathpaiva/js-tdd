@@ -1,0 +1,19 @@
+{
+  "name": "js-tdd",
+  "version": "1.0.0",
+  "description": "js tdd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nathpaiva/js-tdd.git"
+  },
+  "author": "Nath Paiva <hello@nathpaiva.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nathpaiva/js-tdd/issues"
+  },
+  "homepage": "https://github.com/nathpaiva/js-tdd#readme"
+}
