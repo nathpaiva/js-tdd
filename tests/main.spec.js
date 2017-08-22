@@ -1,8 +1,61 @@
-describe('#Main', () => {
-  it('should erro 1 ', () => {
-    throw new Error('Deu erro 1');
+const expect = require('chai').expect;
+const calc = require('../src/main');
+
+describe('Calc', () => {
+  describe('Smoke tests', () => {
+    it('should exist the calc lib', () => {
+      expect(calc).to.exist;
+    });
+
+    it('should exist the method sum', () => {
+      expect(calc.sum).to.exist;
+      expect(calc.sum).to.be.a('function');
+    });
+
+    it('should exist the method sub', () => {
+      expect(calc.sub).to.exist;
+      expect(calc.sub).to.be.a('function');
+    });
+
+    it('should exist the method mult', () => {
+      expect(calc.mult).to.exist;
+      expect(calc.mult).to.be.a('function');
+    });
+
+    it('should exist the method div', () => {
+      expect(calc.div).to.exist;
+      expect(calc.div).to.be.a('function');
+    });
   });
-  it('should erro 2', () => {
-    throw new Error('Deu erro 2');
+
+  describe('Sum', () => {
+    it('should return 4 when `sum(2,2)`', () => {
+      expect(calc.sum(2, 2)).to.equal(4);
+    });
+  });
+
+  describe('Sub', () => {
+    it('should return 4 when `sub(6,2)`', () => {
+      expect(calc.sub(6, 2)).to.equal(4);
+    });
+
+    it('should return -4 when `sub(6,10)`', () => {
+      expect(calc.sub(6, 10)).to.equal(-4);
+    });
+  });
+
+  describe('Mult', () => {
+    it('should return 4 when `mult(2,2)`', () => {
+      expect(calc.mult(2, 2)).to.equal(4);
+    });
+  });
+
+  describe('Div', () => {
+    it('should return 2 when `div(4,2)`', () => {
+      expect(calc.div(4, 2)).to.equal(2);
+    });
+    it('should return  `Não é possível dividir por zero!` when `div(X,0)`', () => {
+      expect(calc.div(4, 0)).to.equal('Não é possível dividir por zero!');
+    });
   });
 });
